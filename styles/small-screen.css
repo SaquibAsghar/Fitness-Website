@@ -1,4 +1,8 @@
 @media (max-width: 500px) {
+	body {
+		overflow: hidden;
+	}
+
 	.container {
 		text-align: center;
 		justify-content: center;
