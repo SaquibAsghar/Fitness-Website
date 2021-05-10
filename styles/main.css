@@ -22,11 +22,14 @@ body {
 	color: #fff;
 	font-weight: 600;
 	z-index: 1;
+	overflow: hidden;
 }
 
 .container p {
 	color: #fff;
 	text-align: center;
+	opacity: 0;
+	
 }
 
 .bcg-1 {
@@ -91,4 +94,61 @@ body {
 	display: block;
 	/* border: 1px solid red; */
 	margin-top: 110px;
+	transition: all 0.3s ease-in-out;
+}
+
+.fnl-btn:hover,
+.btn:hover{
+	background-color: #aaa;
+	color: #c56161;
+}
+
+#page-1 h1{
+	animation: heading 1s ease-in-out 0.1s forwards;
+}
+
+#page-1 p,
+#page-2 p,
+#page-3 p,
+#page-4 p,
+#page-5 p{
+	animation: text 1.5s ease-out 1s forwards;
+}
+
+/* Animation */
+@keyframes heading {
+	0%{
+		transform: translateY(200px);
+		opacity: 0;
+	}
+	25% {
+		/* transform: translateY(150px); */
+		opacity: 0.3;
+	}
+	50% {
+		/* transform: translateY(100px); */
+		opacity: 0.6;
+	}
+	80%{
+		/* transform: translateY(50px); */
+		opacity: 0.9;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes text {
+	0%{
+		transform: translateX(-1100px);
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
 }
